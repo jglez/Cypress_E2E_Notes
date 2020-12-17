@@ -35,6 +35,7 @@ export default function Container() {
       .finally(resetForm)
   }
 
+  // PUT is the edit operation
   const putQuote = ({ id, text, author }) => {
     axios.put(`${quotesURL}/${id}`, { text, author })
       .then(res => {
